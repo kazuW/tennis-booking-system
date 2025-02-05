@@ -7,10 +7,10 @@ readme = "README.md"
 packages = [{include = "tennis_booking_system"}]
 
 [tool.poetry.dependencies]
-python = "3.11.3"
-streamlit = "1.42.0"
-pandas = "2.2.3"
-numpy = "2.2.2"
+python = "^3.11.3"
+streamlit = "^1.42.0"
+pandas = "^2.2.3"
+numpy = "^1.26.0"
 flask = "3.1.0"
 
 
