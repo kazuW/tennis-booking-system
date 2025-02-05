@@ -7,7 +7,6 @@ import json
 # Initialize session state
 if 'authenticated' not in st.session_state:
     st.session_state.authenticated = False
-    # Load session data
     if os.path.exists('session.json'):
         with open('session.json', 'r') as f:
             session_data = json.load(f)
@@ -69,8 +68,8 @@ def main():
             username = st.text_input("ユーザー名")
             password = st.text_input("パスワード", type="password")
             if st.form_submit_button("ログイン"):
-                # TODO: 認証ロジックを実装
-                if username == 'tennis' and password == 'katsutadai':
+                if (username == st.secrets["credentials"]["username"] and 
+                    password == st.secrets["credentials"]["password"]):
                     st.session_state.authenticated = True
                 else:
                     st.error("ユーザー名またはパスワードが違います")
