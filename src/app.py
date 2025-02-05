@@ -47,6 +47,7 @@ def load_data():
 
 def main():
 
+    st.set_page_config(page_title="コート予約状況", page_icon=":🎾:")
     css = """
         <style>
         #MainMenu {visibility: hidden;}
